@@ -1,6 +1,6 @@
 # Encoding
 
-Given a representative in extended coordinates $(X,Y,Z,T)$, encoding works as follows where $a$ and $d$ are the curve parameters as described [here](../decaf377.md#curve-parameters).
+Given a representative in extended coordinates $(X, Y, Z, T)$, encoding works as follows where $a$ and $d$ are the curve parameters as described [here](../decaf377.md#curve-parameters).  
 
 1. $u_1 \gets (X+T)(X-T)$.
 
