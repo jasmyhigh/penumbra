@@ -7,7 +7,7 @@ Penumbra:
 
 1. They support randomization of signing and verification keys.  Spending a note
 requires use of the signing key that controls its spend authorization, but if
-the same spend verification key were included in multiple transactions, they
+the same spend verification key was included in multiple transactions, they
 would be linkable.  Instead, both the signing and verification keys are kept
 secret[^1], and each spend description includes a randomization of the
 verification key, together with a proof that the randomized verification key was derived from the correct spend verification key.
@@ -21,7 +21,7 @@ transaction they were intended for and enforce conservation of value.
 Let $\mathbb G$ be the `decaf377` group of prime order $r$.  Keys and signatures
 are parameterized by a domain $D$.  Each domain has an associated generator
 $B_D$.  Currently, there are two defined domains: $D = \mathsf{SpendAuth}$ and
-$D = \mathsf{Binding}$.  The hash function $H^\star : \{0,1\}^* \rightarrow
+$D = \mathsf{Binding}$.  The hash function $H^\star: \{0,1\}^* \rightarrow
 \mathbb F_r$ is instantiated by using `blake2b` with the personalization string
 `decaf377-rdsa---`, treating the 64-byte output as the little-endian encoding of
 an integer, and reducing that integer modulo $r$.
