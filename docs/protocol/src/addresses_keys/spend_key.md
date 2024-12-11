@@ -16,7 +16,7 @@ spend authority was derived using the salt `mnemonic0`.
 ## Default BIP44 Derivation
 
 Beginning in Testnet 62, from the mnemonic seed phrase, spend `seeds` were derived
-as described in [BIP44]. The BIP44 specification describes a organizational
+as described in [BIP44]. The BIP44 specification describes an organizational
 hierarchy allowing a user to remember a single seed phrase for multiple
 cryptocurrencies. 
 
@@ -27,7 +27,7 @@ m / purpose' / coin_type' / wallet_id'
 ```
 
 `m` represents the master node and is derived from the spend seed as described in
-[BIP32] in section "Master key generation".
+[BIP32] in the section "Master key generation".
 
 The purpose field is a constant set to `44'` to denote that BIP44 is being used.
 
@@ -38,7 +38,7 @@ Penumbra's registered `coin_type` is defined in [SLIP-0044]:
 
 The default wallet ID is set to 0. A typical use case for Penumbra will involve
 generating the single default wallet, and then using multiple Penumbra accounts
-within that wallet which share a single viewing key.
+within that wallet which shares a single viewing key.
 
 The BIP44 path is used with the seed phrase to derive the spend `seed` for use
 in Penumbra following the child key derivation specified in [BIP32].
