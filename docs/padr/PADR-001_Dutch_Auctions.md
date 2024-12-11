@@ -17,7 +17,7 @@ This choice has a number of desirable properties:
 
 ## User Stories
 
-A user has a number of tokens in Penumbra's shielded pool. They would like to sell some of them, but does not know exactly what they are worth, as (for whatever reason) there is no externally discovered price for the tokens. 
+A user has a number of tokens in Penumbra's shielded pool. They would like to sell some of them, but do not know exactly what they are worth, as (for whatever reason) there is no externally discovered price for the tokens. 
 
 They open `minifront`, which they are using with Prax, aiming to discover how to accomplish this goal, ideally without having to leave Penumbra. The landing page for `minifront` shows them their asset balances and informs them that Penumbra's auction capabilities could accomplish their goal.
 
@@ -96,7 +96,7 @@ message DutchAuctionDescription {
     // The block height at which the auction ends.
     //
     // Together with `start_height`, `max_output`, and `min_output`,
-    // this implicitly defines the speed of the auction.
+    //This implicitly defines the speed of the auction.
     uint64 end_height = 6;
     // The number of discrete price steps to use for the auction.
     //
