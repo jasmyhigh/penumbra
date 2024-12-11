@@ -117,7 +117,7 @@ message DutchAuctionState {
     // Dutch auctions move from:
     // 0 (opened) => 1 (closed) => n (withdrawn)
     uint64 seq = 1;
-    // If present, the current position controlled by this auction.
+    // If present, the current position is controlled by this auction.
     dex.v1.PositionId current_position = 2;
     // If present, the next trigger height to step down the price.
     uint64 next_trigger = 3;
@@ -197,7 +197,7 @@ message ActionDutchAuctionScheduleView {
 #### `ActionDutchAuctionEnd`
 
 ```proto
-// Ends a Dutch auction using protocol-controlled liquiidty.
+// Ends a Dutch auction using protocol-controlled liquidity.
 message ActionDutchAuctionEnd {
     // The auction to end.
     AuctionId auction_id = 1;
@@ -297,7 +297,7 @@ message ActionDutchAuctionWithdrawView {
 
 In design A, we have a single place to look up the state of any auction and which IDs have been used, but we can't know the type of that state until we read it and inspect the `Any`. In design B, we have a single place to look up whether an ID has been used, but no way to determine what type of auction that is.  Given that we already want to have the `DutchAuctionDescription` hashed with the proto name to the auction ID (which is exactly the data of a protobuf `Any` type), design A may be preferable? (We chose design A).
 
-The component does not maintain a list of all open auctions in the chain state, because this is not necessary for it to function.  Clients that want that information should consult an indexer.
+The component does not maintain a list of all open auctions in the chain state, because this is not necessary for it to function.  Clients who want that information should consult an indexer.
 
 ### Component Logic
 
@@ -367,7 +367,7 @@ To process a trigger, the component reads the state of the triggered auction. Th
 
 ### Fault Isolation
 
-The auction component should have a value balance circuit breaker, copying code from the DEX component. The auction component's value balance should do accounting of value recorded by the auction component. Value flows into the auction component via `ActionDutchAuctionSchedule`. It flows out (into the DEX component) when moving value into a newly opened DEX position, and back in (out of the DEX component) when closing that position. Finally, it flows out of the auction component when withdrawing from an auction.
+The auction component should have a value balance circuit breaker, copying code from the DEX component. The auction component's value balance should account for the value recorded by the auction component. Value flows into the auction component via `ActionDutchAuctionSchedule`. It flows out (into the DEX component) when moving value into a newly opened DEX position, and back in (out of the DEX component) when closing that position. Finally, it flows out of the auction component when withdrawing from an auction.
 
 ### Events
 
