@@ -4,7 +4,7 @@ Each swap contains a SwapBody and a zk-SNARK swap proof.
 
 ## [Swap Body](#swap-body)
 
-The body of an `Swap` has five parts:
+The body of a `Swap` has five parts:
 
 1. A `SwapPayload`, which consists of the swap commitment and the `SwapCiphertext`,
 2. A fee balance commitment, which commits to the value balance of the pre-paid fee;
@@ -26,7 +26,7 @@ The corresponding plaintext, `SwapPlaintext` consists of:
 * the swap `Rseed`, which is used to derive the `Rseed` for the two output notes.
 
 The output notes for the `Swap` can be computed given the `SwapPlaintext` and the
-`BatchSwapOutputData` from that block. The `Rseed` for each output note are computed from
+`BatchSwapOutputData` from that block. The `Rseed` for each output note is computed from
 the `SwapPlaintext` using rate-1 Poseidon hashing with domain separators $ds_1$ and $ds_2$ defined as the `Fq` element constructed using:
 
 `ds_1 = from_le_bytes(BLAKE2b-512(b"penumbra.swapclaim.output1.blinding")) mod q`
@@ -50,7 +50,7 @@ The invariants that the Swap upholds are described below.
 
 2. The swap binds to a specific claim address.
 
-3. The swap does not reveal the swapper identity. The swap *does* reveal the assets being swapped, as well as the amounts of those assets.
+3. The swap does not reveal the swapper's identity. The swap *does* reveal the assets being swapped, as well as the amounts of those assets.
 
     3.1 The swap data included in a transaction preserves this property.
 
