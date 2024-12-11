@@ -101,7 +101,7 @@ submission can be redeemed for the original proposal deposit (if not slashed)
 and a commemorative `proposal_N_passed`, `proposal_N_failed`, or `proposal_N_slashed`
 NFT.
 
-[^1]: If withdrawing a proposal halted on-chain voting immediately, the escrow
+[^1]: If withdrawing a proposal halts on-chain voting immediately, the escrow
 mechanism would not be effective at deterring spam, since the proposer could
 yank their proposal at the last minute prior to losing their deposit.  However,
 at the UX level, withdrawn proposals can be presented as though voting were
