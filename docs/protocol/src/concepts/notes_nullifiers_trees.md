@@ -3,7 +3,7 @@
 Transparent blockchains operate as follows: all participants maintain a copy of
 the (consensus-determined) application state. Transactions modify the
 application state directly, and participants check that the state changes are
-allowed by the application rules before coming to consensus on them.
+allowed by the application rules before coming to a consensus on them.
 
 On a shielded blockchain like Penumbra, however, the state is fragmented across
 all users of the application, as each user has a view only of their "local"
