@@ -125,7 +125,7 @@ To achieve this, the DEX engine assembles a _frontier of positions_ $F$, which i
 
 #### Sensing constraints
 
-In the simple case, each position in the frontier has enough inventory to satisfy routing to the next hop in the route until the target is reached. But this is not always the case, so we need to be able to sense which positions in the frontier are constraint and pick the most limiting one.
+In the simple case, each position in the frontier has enough inventory to satisfy routing to the next hop in the route until the target is reached. But this is not always the case, so we need to be able to sense which positions in the frontier are constraint and pick the most limiting one.  
 
 We implement a capacity sensing routing that returns the index of the most limiting constraint in the frontier. The routine operates statelessly, and works as follow:
 First, it pulls every position in the frontier and simulates execution of the input against those positions, passing the filled amounts forward to the next position in the frontier. If at some point an unfilled amount is returned, it means the current position is a constraint. When that happens, we record the index of the position, passing the output of the trade to the next position. This last point is important because it means that picking the most limiting constraint is equivalent to picking the last recorded one.
