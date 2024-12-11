@@ -235,12 +235,12 @@ messages sent to any member of its family of diversified transmission (public)
 keys.
 
 A similar approach can be applied to S-FMD2, but some modifications to the tag
-mechanism are required to avoid use of the basepoint in the `Test` procedure.
+mechanisms are required to avoid use of the basepoint in the `Test` procedure.
 **Unfortunately, this extension is not compatible with compact clue and
 detection keys, so although it is presented here for posterity, it is not used
 in Penumbra**.
 
-Let $\mathcal D$ be the set of diversifiers, and let $H_3 : \mathcal D
+Let $\mathcal D$ be the set of diversifiers, and let $H_3: \mathcal D
 \rightarrow \mathbb G$ be a group-valued hash function.  At a high level, our
 goal is to replace use of a common basepoint $B$ with a *diversified basepoint*
 $B_d = H_3(d)$ for some $d \in \mathcal D$.  
