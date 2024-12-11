@@ -166,7 +166,7 @@ examining the impact of amount disclosure and potential mitigations.
 
 - [ ] TODO: on the client side, allow a "time preference" slider (immediate vs long duration), which spreads execution of randomized sub-amounts across multiple blocks at randomized intervals within some time horizon
 
-- [ ] TODO: extract below into separate section about privacy on penumbra
+- [ ] TODO: extract below into a separate section about privacy on penumbra
 
 Assuming that all amounts are disclosed, an attacker could attempt to
 deanonymize parts of the transaction graph by tracing amounts, using
