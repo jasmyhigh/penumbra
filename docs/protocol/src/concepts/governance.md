@@ -68,7 +68,7 @@ created before the proposal started, and the stateful checks ensure that it was 
 spent after the proposal started.
 
 This change allows multiple proposals to be voted on concurrently, at the cost
-of linkability.  While the same note can be used to vote on multiple proposals,
+of linkability.  While the same note can be used to vote on multiple proposals,  
 those votes, as well as the subsequent spend of the note, will have the same
 nullifier and thus be linkable to each other.  However, the `Vote` descriptions
 are shielded, so an observer only learns that two opaque votes were related to
