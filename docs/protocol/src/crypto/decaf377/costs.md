@@ -147,7 +147,7 @@ is almost free.
 
 The standard "compressed Edwards y" format encodes a point $(x,y)$ by the
 $y$-coordinate and a sign bit indicating whether $x$ is nonnegative.  In
-software, the cost of encoding and decoding are about the same, and dominated by
+software, the cost of encoding and decoding are about the same, and are dominated by
 taking an inverse square root.  In circuits, the costs of encoding and decoding
 are also about the same, but they are instead dominated by a sign check that
 matches the sign of the recovered $x$-coordinate with the supplied sign bit.
