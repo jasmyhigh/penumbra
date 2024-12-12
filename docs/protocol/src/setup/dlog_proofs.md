@@ -33,7 +33,7 @@ a hash function
 $$
 H : \{0, 1\}^* \times \mathbb{G}^3 \to \mathbb{F}
 $$
-modelled as a random oracle.
+modeled as a random oracle.
 
 **Proving**
 
