@@ -1,6 +1,6 @@
 # DelegatorVote Descriptions
 
-Each delegator vote contains an DelegatorVoteBody, a spend authorization signature, and a zk-SNARK delegator vote proof.
+Each delegator vote contains a DelegatorVoteBody, a spend authorization signature, and a zk-SNARK delegator vote proof.
 
 ## [DelegatorVoteProof](#delegatorvote-body)
 
