@@ -44,7 +44,7 @@ bits.
 ## Base Reward Rate
 
 The base reward is an input to the protocol, and the exact details of how this
-base rate $r_{e}$ is determined is not yet decided. For now, we can assume it is
+base rate $r_{e}$ is determined are not yet decided. For now, we can assume it is
 derived from the block header.
 
 
