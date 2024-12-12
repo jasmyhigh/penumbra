@@ -1,6 +1,6 @@
 # Undelegate Claim Descriptions
 
-Each undelegate claim contains a UndelegateClaimBody and a zk-SNARK undelegate claim proof.
+Each undelegate claim contains an UndelegateClaimBody and a zk-SNARK undelegate claim proof.
 
 ## [UndelegateClaim](#undelegateclaim-body)
 
@@ -15,7 +15,7 @@ The body of a `UndelegateClaim` has four parts:
 
 #### Local Invariants
 
-1. You cannot claim undelegations that have not finishing unbonding.
+1. You cannot claim undelegations that have not finished unbonding.
 
 2. Slashing penalties must be applied when unbonding.
 
